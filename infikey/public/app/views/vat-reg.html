@@ -1,0 +1,536 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.typesregsection').offset().top;
+			border= border-500;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						VAT Registration
+					</h1>
+					<hr class="headhr">
+					<h5 style="margin-top: 20px; margin-bottom: 20px;">
+						Often known as TIN Number, it is mandatory for any manufacturing or trading business with a turnover of over Rs. 5 lakh.
+					</h5>
+					<h4>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i> Data Check
+					</h4>
+					<p>
+						We do a thorough check of the files you send in
+					</p>
+					<h4>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i> Vendor Connect
+					</h4>
+					<p>
+						We will appoint an affiliate to process your application
+					</p>
+					<h4>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i> Receipt of TIN
+					</h4>
+					<p>
+						The TIN will be issued within 15 days of the application
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="regsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						What is VAT Registration
+					</h3>
+					<hr class="h3headings">
+					<p>
+						Value-added Tax (VAT) Registration, also erroneously known as TIN and CST Registration, is mandatory for any business entity engaged in the sale of goods in India and a turnover of over Rs. 5 lakh (although it may be higher in some states). It is a multi-stage state tax that accumulates at various stages of production and supply. At every stage, the purchaser pays the tax and is allowed to offset the same on subsequent sale.
+					</p>
+					<p>
+						Consumers, therefore, ultimately bear this tax. VAT is collected by the state government and it is essential to know what the VAT rate is for the type of good or service you provide in each state you provide it in. Returns need to be filed on the 20th of each month (partnerships, LLPs and proprietorships can do so quarterly).
+					</p>
+					<p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/PKNbdpVOWfg" frameborder="0" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						6 Essential Facts on VAT Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						When do you need VAT Registration?
+					</h4>
+					<p>
+						Whether or not you need VAT registration right now depends on the state in which your business is operating. In most states, registration is not required at all until your turnover crosses a certain threshold. This is usually Rs. 5 lakh in annual revenues. It also matters what it is you’re selling, as some items may be exempt. Salt, for example, is exempt from VAT.
+					</p>
+					<h4>
+						I am an online seller. Do I need VAT Registration?
+					</h4>
+					<p>
+						If you are planning to sell via any of the large online marketplaces, such as Amazon, Flipkart or Snapdeal, you will need a VAT Registration no matter what your turnover is. A TIN or Taxpayer Identification Number is mandatory before you get on their platform.
+					</p>
+					<h4>
+						How long will it take for approval?
+					</h4>
+					<p>
+						This depends on two things: your promptness with the documents required and the work load of the government. Do ensure that you have all the documents in order or it will end up being delayed or need a reapplication. Once the documents are submitted, it depends on how soon the inspector visits your premises (yes, you must have a commercial space to be eligible for VAT). If you live in a metropolitan city, the visit is likely to be sooner than if you live in a Tier I or II city.
+					</p>
+					<h4>
+						How do I pay the government the tax I collect and file returns?
+					</h4>
+					<p>
+						VAT is collected at every stage of production, so some of the amount you collect from your customers will be retained by you, while the remainder will be paid to government via designated banks on a monthly basis. Returns must also be filed. The date and frequency differs with every state.
+					</p>
+					<h4>
+						What is the VAT Composition Scheme?
+					</h4>
+					<p>
+						Businesses with a turnover of between Rs. 10 lakh and Rs. 50 lakh can simplify VAT compliance by applying for the VAT Composition Scheme. By joining this scheme, they will pay a lower rate of tax, that is fixed, and file only quarterly, or, for some businesses, annual returns.
+					</p>
+					<h4>
+						Can payment be made and returns filed online?
+					</h4>
+					<p>
+						Yes, all Indian states have websites (although some don't work very well) that allow payment of the VAT collected and return filing.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Documents Required for VAT Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						<b>TO BE SUBMITTED BY DIRECTORS & SHAREHOLDERS</b>
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Scanned PAN Card of Partners/Directors/Proprietor
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Scanned copy of Voter's ID/Passport/Driver's License
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Scanned passport-sized photograph
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Scanned passport-sized photograph
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Rental agreement/Sale deed of commercial space
+					</p>
+					<h4>
+						<b>FOR THE ENTITY (IF ANY)</b>
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN Card of Company or Partnership
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Board Resolution, in case of company
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Incorporation Certificate or Partnership Agreement
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Memorandum & Articles of Association
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						What You Need To Know
+					</h3>
+					<hr class="h3headings">
+					<div style="float: left;">
+						<img src="assets/img/img1.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							First Time Only
+						</h4>
+						<p>
+							VAT is to be paid only when a commodity is produced or imported and sold for the first time. Subsequent sales are exempt, as are all exports. Local and inter-state rates differ on all goods, so there's no fixed rate for sales tax.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img2.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Same As TIN
+						</h4>
+						<p>
+							VAT is the tax you pay while purchasing raw materials and what the end-consumer ultimately pays. The number you are registered under is called Tax-payer Identification Number (TIN). VAT registration and TIN registration are, therefore, the same.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img3.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Commercial Space Necessary
+						</h4>
+						<p>
+							A government official is likely to inspect the premises, so this should not be taken lightly. The space should be in good condition or the inspector could delay the grant of the registration.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs on VAT Registration</h2><hr class="h3headings">
+				<div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading panelcustom" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+										1.Do I need to be in office during the inspection?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									Yes, it is better if you are in office during the inspection. We will try to inform you about the time of the visit. However, surprise visits are occasionally conducted.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading panelcustom" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										2.Will a resident office be sufficient?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									No, it won't. However, if you have a commercial space attached to your house, so long as it has a separate entrance, it can be treated as a commercial establishment.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading panelcustom" role="tab" id="headingThree">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										3.When are VAT fillings to be done?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body">
+									Due dates differ from state to state, as VAT is a state subject. Most states require VAT to be filed monthly, and also need an annual return to be filed.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading panelcustom" role="tab" id="headingFour">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+										4.What is the deposit amount? How do i deposit it?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								<div class="panel-body">
+
+									In Mumbai and Pune, the amount is Rs. 30,030. The applicant needs to have two demand drafts for Rs. 25,000 and Rs. 5030 in favour of MVAT. In Delhi and Chennai, no deposit is needed. In Bangalore, Ahmedabad and Kerala, it ranges from Rs. 5000 to Rs. 25,000, depending on the type of the business. In Gurgaon, Noida and Ghaziabad, there is no deposit but you need to furnish a bank guarantee of Rs. 1 lakh.
+
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading panelcustom" role="tab" id="headingFive">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+										5.How do i send in the documents?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+								<div class="panel-body">
+									You can scan and send us the documents. We could even arrange for the documents to be picked up by our representatives
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading panelcustom" role="tab" id="headingSix">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+										6.What is central sales tax?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+								<div class="panel-body">
+									VAT is levied on intra-state sale of goods, while Central Sales Tax (CST) applies to inter-state sale of goods. The application for CST Registration is made in the VAT Registration form. You will receive both registrations simultaneously.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						VAT Registration Process
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>2 WORKING HOURS</b>
+					</h5>
+					<p>
+						You need to send in PAN cards, identity, address proofs and four passport-sized photographs of the proprietor/partners/directors. Private limited companies must also submit the Memorandum and Articles of Association, Form 32, Form 18 and Certificate of Incorporation, while Partnerships must submit the Partnership Agreement. Finally, the rental agreement for the office address, if it is rented, along with the electricity bill.
+					</p>
+					<h5>
+						<b>2 WORKING DAYS</b>
+					</h5>
+					<p>
+						The application will be prepared by our representatives in two working days. It will then be filed and submitted to the authorities via our affiliates. We will be sent a basic acknowledgement within seven working days.
+					</p>
+					<h5>
+						<b>10 TO 25 WORKING DAYS</b>
+					</h5>
+					<p>
+						Your application will be processed by the department and may involve a physical inspection. Once approved, the Taxpayer Identitification Number (TIN), an 11-digit number, will be issued. A certificate will also be issued. We will courier it to you when it is received from the government department.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="typesregsection" id="typereg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Types of Government Registrations</h2>
+						<hr class="h2headings">
+					</div>
+					<div class="text-center  table-responsive">
+						<table class="table ">
+							<thead>
+								<tr>
+									<td style="border:0px;">              </td>
+									<td style="border:0px;"><strong>VAT Registration</strong></td>
+									<td style="border:0px;"><strong>Service Tax Registration</strong></td>
+									<td style="border:0px;"><strong>Importer-Exporter Code</strong></td>
+									<td style="border:0px;"><strong>Shops & Establishments Act</strong></td>
+									<td style="border:0px;"><strong>Profession Tax Registration</strong></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Who It's For</strong></td>
+									<td>Sellers of goods</td>
+									<td>Service providers</td>
+									<td>Importers & exporters</td>
+									<td>All businesses</td>
+									<td>All employers</td>
+								</tr>
+								<tr>
+									<td><strong>When You Need It</strong></td>
+									<td>When sales cross Rs. 5 lakh</td>
+									<td>When sales cross Rs. 9 lakh</td>
+									<td>For any imports or exports</td>
+									<td>Within 30 days of operations</td>
+									<td>Within 30 days of operations</td>
+								</tr>
+								<tr>
+									<td><strong>Returns to be Filed</strong></td>
+									<td>Yes</td>
+									<td>Yes</td>
+									<td>No</td>
+									<td>No</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td><strong>Issuing Authority</strong></td>
+									<td>State Government</td>
+									<td>State Government</td>
+									<td>Directorate General of Foreign Trade</td>
+									<td>Municipal Corporation</td>
+									<td>State Government</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

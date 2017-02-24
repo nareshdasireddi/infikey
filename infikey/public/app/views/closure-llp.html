@@ -1,0 +1,320 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.whyinfisection').offset().top;
+			border= border-350;
+			console.log(border);
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						Closure of Limited Liability Partnership
+					</h1>
+					<hr class="headhr">
+					<p style="margin-top: 20px; margin-bottom: 20px; line-height: 25px; font-size: 16px;">
+						If LLP wants to close down its business or where it is not carrying on any business operations, it can make an application to the Registrar of Companies for declaring the company as defunct and removing the name of the LLP from its register of LLP’s.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					
+                
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				
+
+
+				</div>
+		</div>
+	</section>
+	<section class="regsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Procedure 
+					</h3>
+					<hr class="h3headings">
+					<p>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i>
+						An application is required to be made in eForm 24 to the Registrar of Companies for Striking off the Name
+					</p>
+					<p>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i>
+						The Registrar shall publish a notice on its website within 1 month
+					</p>
+					<p>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i>
+						Application submitted to be supported by Indemnity Bonds
+					</p>
+					<p>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i>
+						Application filed also to be supported by approvals or No Objection Certificates from concerned Regulatory Authorities
+					</p>
+					<p>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i>
+						The Registrar, where he has sufficient cause to believe that the limited liability partnership has any asset or liability, satisfy himself that sufficient provision has been made for the realization of all amount due to the limited liability partnership
+					</p>
+					<p>
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i>
+						On the expiry of period of one month, the Registrar may, by an order, unless cause to the contrary is shown by the limited liability partnership, strike its name off the register, and shall publish notice thereof in the Official Gazette, and on the publication in the Official Gazette of this notice, the limited liability partnership shall stand dissolved.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection" style="text-align: justify;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Declaring the LLP as Defunct:
+					</h3>
+					<hr class="h3headings">
+					<p>
+						Declaring the LLP as defunct is much easier process to close down the LLP as compared to wounding up because it does not involves high formalities and due to simplified procedure, the time consumed is comparatively very less.
+					</p>
+					<h4>
+						Winding Up Of LLP
+					</h4>
+					<p>
+						Winding up is process, where all the assets of the business are disposed off to meet the liabilities of the same and surplus any, is distributed among the owners. Voluntary Winding up: Under this, the partners may between themselves decide to stop and wound up the operations of the LLP.
+					</p>
+					<p>
+						Compulsory winding up- A limited liability partnership may be compulsorily wound up by the Tribunal
+					</p>
+					<p>
+						<ul>
+							<li>
+								LLP be wound up by the Tribunal.
+							</li>
+							<li>
+								If, for a period of more than six months, the number of partners of the limited liability partnership is reduced below two.
+							</li>
+							<li>
+								If the LLP is unable to pay its debts.
+							</li>
+							<li>
+								If the LLP has acted against the interests of the sovereignty and integrity of India, the security of the State or public orderfiling.
+							</li>
+							<li>
+								If the LLP has made a default in filing with the Registrar the Statement of Account and Solvency or annual return for any five consecutive financial years.
+							</li>
+							<li>
+								If the Tribunal is of the opinion that it is just and equitable that the limited liability partnership be wound up.
+							</li>
+						</ul>
+					</p>
+					<h4>
+						Conditions for Closure:
+					</h4>
+					<p>
+						<ul>
+							<li>
+								As per section 37(1) b not carrying any business for period of 2 years or more, this is satisfied by registrar.
+							</li>
+							<li>
+								Or one year Application made in form 24 a.
+							</li>
+						</ul>
+					</p>
+					<h4>
+						Income tax of LLP:
+					</h4>
+					<p>
+						<ul>
+							<li>
+								Income tax slab rate 30% , education cess 2% and higher education cess 1%
+							</li>
+							<li>
+								Income more than Rs. 1 crore --- 10% surcharge
+							</li>
+							<li>
+								Capital gain arising from any sale of asset 15 %
+							</li>
+							<li>
+								Losses only carry forward not allowed to partners
+							</li>
+						</ul>
+					</p>
+					<h4>
+						Procedure for Income Tax on Closure of LLP
+					</h4>
+					<p>
+						<li>
+							Pay all tax dues and liabilities
+						</li>
+						<li>
+							File annual return
+						</li>
+						<li>
+							Close company account
+						</li>
+						<li>
+							Capital of company should be transferred to company loss account
+						</li>
+						<li>
+							Company closed all loans and liability.
+						</li>
+						<li>
+							Completed the company credit
+						</li>
+					</p>
+					<h4>
+						Document Required To Closure of LLP
+					</h4>
+					<p>
+						<li>
+							Copy of detailed application
+						</li>
+						<li>
+							Copy of authority to make the application
+						</li>
+						<li>
+							Copy of consent of all partners and creditors
+						</li>
+						<li>
+							Copy of undertaking or indemnity bond
+						</li>
+						<li>
+							Copy of statement of assets and liabilities duly certified as true and correct by auditor/ chartered accountant in practice
+						</li>
+						<li>
+							Copy of acknowledgement of latest income-tax return
+						</li>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,245 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.whyinfisection').offset().top;
+			border= border-350;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						Conversion of Private Company into Public Company
+					</h1>
+					<hr class="headhr">
+					<p class="main-head-text">
+						Converting your Private Limited Company into Public will always helps to boost your company and advantage of raising more capital.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Key Benefits
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						Easy Access to Public for Raising Funds
+					</h4>
+					<p>
+						Public limited Company is the only corporate form of organization which is allowed to raise funds from general public. Public Limited Company enjoys better avenues for borrowing of funds. It can issue debentures, secured as well as unsecured, accept deposits from the public, etc. Banking and financial institutions prefer to render large financial assistance to Public Limited Companies. Even a closely held Company can operate as a Public Company without diluting promoters' stake.
+					</p>
+					<h4>
+						High Market Recognition
+					</h4>
+					<p>
+						Public Limited Companies as compared to other business forms enjoys better recognition in the market and bestows confidence in the stakeholders.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Key Requirements
+					</h3>
+					<hr class="h3headings">
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Minimum Authorized Share Capital shall be Rs. 500,000 (INR Five Lac)
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Minimum Paid-up Share Capital shall be Rs. 500,000 (INR Five Lac)
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Minimum 7 Shareholders
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Minimum 3 Directors
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						The directors and shareholders can be same person
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						If the above requirements are not fulfilled by the Private Company, then the relevant alterations / changes to be made before conversion
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						DIN (Director Identification Number) for all the Directors
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						DSC (Digital Signature Certificate) for one of the Directors
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						Conversion steps
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						<i class="fa fa-check-circle icon" aria-hidden="true" style="margin-right: 10px;"></i> Board meeting
+					</h4>
+					<h4>
+						<i class="fa fa-check-circle icon" aria-hidden="true" style="margin-right: 10px;"></i> Notice of General Meeting
+					</h4>
+					<h4>
+						<i class="fa fa-check-circle icon" aria-hidden="true" style="margin-right: 10px;"></i> Filing of Special Resolution with ROC
+					</h4>
+					<h4>
+						<i class="fa fa-check-circle icon" aria-hidden="true" style="margin-right: 10px;"></i>Filing of Prospectus or Statement in lieu of prospectus
+					</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>

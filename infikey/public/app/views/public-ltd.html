@@ -1,0 +1,502 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.processsection').offset().top;
+			border= border-350;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						Public Limited Company Registration In India
+					</h1>
+					<hr class="headhr">
+					<p class="main-head-text">
+						Setting up as a PLC means you own a Public Limited Company and permit you to offer shares to the public. A public limited company is a voluntary association of members which is incorporated and, therefore has a separate legal existence and the liability of whose members is limited. Its formation, working and its winding up, in fact, all its activities are strictly governed by laws, rules and regulations. The Indian Companies Act, 2013 contains the provisions regarding the legal formalities for setting up of a public limited company.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						How Do I Start A Public Limited Company?
+					</h3>
+					<hr class="h3headings">
+					<p>
+						For registering a Public Limited Company, kindly go through the following steps:
+					</p>
+					<h4>
+						STEP-1: Requirement Before Registration
+					</h4>
+					<p>
+						Minimum Authorized Capital and Paid-up capital should be Rs. 5,00,000/-. At least three Directors and Seven Members required forming a Public Limited Company.
+					</p>
+					<h4>
+						STEP-2: DSC And DIN
+					</h4>
+					<p>
+						The proposed Director should have a valid DIN (Director Identification Number) allotted by the Ministry of Corporate Affairs. One of the Directors should have a valid Digital Signature Certificate issued by the Certifying Authorities approved by the Ministry of Corporate Affairs.
+					</p>
+					<h4>
+						STEP-3: Registering Your Company Name
+					</h4>
+					<p>
+						Company Registration in India starts with filing of an application for Company Name. The chosen name for a company should be unique all over India. Usually in a day or two, concerned ROC approves the name if the applied name is not same or closely similar to the name of an existing company and the proposed name is in accordance with the Guidelines for Name Availability issued by the Ministry of Corporate Affairs (MCA). Check with MCA website to find you name availability, click here.
+					</p>
+					<h4>
+						STEP-4: Submission Of Final Documents
+					</h4>
+					<p>
+						On getting the company name approved we need to submit final documents to the RoC. The office ROC will scrutinize the incorporation documents. If the documents are found in order, the Company will be registered and the Certificate of Incorporation will be issued by the Registrar.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Documents Required for Company Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						<b>Scanned copy of the following documents has to be provided by the promoters of the company:</b>
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN card copy with Self attestation
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Voter Id copy or Passport copy or Aadhar card copy or Driving license copy with self attestation.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Latest Bank account statement or Mobile /Telephone bill or Electricity Bill (not older than two months)- no need for self attestation.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Latest passport size photo in jpeg.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						For the registered office proof of the company, if the property is rented/ leased, then copy or rental agreement or lease agreement.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of Electricity bill or Property Tax receipt or Water Tax receipt not older than two months.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of No objection certificate from the owner of the property.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						If owned property, copy of Sale Deed and Electricity bill is sufficient.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						In case of NRI or Foreign national, Passport copy has to be notarized at the Indian Embassy of the particular country.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Utility bill has to be provided of the particular country where the NRI or Foreign national resides and it should be notarized.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						Advantages of Public Limited Company
+					</h3>
+					<hr class="h3headings">
+					<div style="float: left;">
+						<img src="assets/img/img1.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Separate Legal Entity
+						</h4>
+						<p>
+							A Company is a separate legal person and juristic person under the law. The company on its own can hold properties and is differs from its members and Directors. The Board of Directors of the Company can only authorised to manage the company, but they do not own the company entirely.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img2.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Limited Liability
+						</h4>
+						<p>
+							The members and Directors of the Company posses limited liability and hence they will not be liable for the debts of the company. They are responsible and answerable but the personal assets of the members and directors are not involved in writing of debts for the company.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img3.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Flexible To Trade In Stock Exchange
+						</h4>
+						<p>
+							Unlike Private Limited Companies, a Public company has the flexibility of trading its shares in stock exchange and it is one of the greatest advantages for any company. Any company, whose shares has positive market in stock exchange then the company will have a great market value and the share value of the company tends to increase.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style type="text/css">
+		/* Style the buttons that are used to open and close the accordion panel */
+		button.accordion {
+			background-color: #99ddff;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			border-bottom-color: rgb(255, 255, 255);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		.accordion{
+			border: 1px solid #1a1a1a;
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		button.accordion.active, button.accordion:hover {
+			background-color: #66b3ff;
+		}
+		.panel {
+			margin-bottom: 0px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        	panel.style.display = "none";
+        } else {
+        	panel.style.display = "block";
+        }
+    }
+}
+</script>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs</h2><hr class="h3headings">
+				<div>
+					<button class="accordion">
+						How many members are required to register a Public Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Minimum Three (3) Directors and Seven (7) shareholders required to register a Public Limited Company.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is the minimum capital required to start a Public Limited Company ?
+					</button>
+					<div class="panel">
+						As per the latest amendment the cap for paid-up capital has been removed, but capital fee has to be paid for Authorized capital and it should be Rs. 5,00,000/- and not less than that.
+					</div>
+
+					<button class="accordion">
+						Do I need to show the Authorized capita amount in my company bank account ?
+					</button>
+					<div class="panel">
+						<p>
+							Do I need to show the Authorized capita amount in my company bank account ?Worry not; there is no need to show the authorized capital amount in your company bank account. Just open a bank account on company name and run your business.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Does INC-29 applicable for Public Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Yes, INC-29 is applicable for Public Limited Companies. But care should be taken while choosing your company names. In INC-29 only one name has to be provided, so before submitting your form through INC-29 have check the availability of the name.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Can I trade my shares in Stock Exchange after registering a Public Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							No, there are two types of Public Limited Company, unlisted and listed Public company. Unlisted public company has no right to list their shares in Stock Exchanges and only listed companies has the right to list its shares in Stock Exchange. But if you want to register yourself as Listed Public Limited Company, huge compliance and more documentation is involved and it will delay the incorporation process. You can register as unlisted Public Company and then can convert yourself as Listed Public Limited Company.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How much time does it take to register a Public Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Infikey can complete the entire registration process within 15-20 days, if all the documents are provided in order, in the manner as we wanted. If delay is from your part in providing us the documents or delay in payment may also reflect in delay of incorporation.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Whom can I appoint as Nominee ?
+					</button>
+					<div class="panel">
+						<p>
+							Nominee should be any Resident of India. The term "resident in India" means a person who has stayed in India for a period of not less than 182 days during the immediately preceding one calendar year.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How many types of OPC are there ?
+					</button>
+					<div class="panel">
+						<p>
+							There are 3 types of OPC’s –
+							<ul>
+								<li>
+									A company limited by shares
+								</li>
+								<li>
+									A company limited by guarantee
+								</li>
+								<li>
+									An unlimited company
+								</li>
+							</ul>
+						</p>
+					</div>
+
+					<button class="accordion">
+						Is it possible for me to convert OPC into Private Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Yes you can, if an OPC has the following requirements:
+							<ul>
+								<li>
+									Paid up share capital should exceed Rs 50 Lakhs or more.
+								</li>
+								<li>
+									Annual average turnover should not exceed Rs. 2 Crores in three immediate preceding consecutive years.
+								</li>
+								<li>
+									An OPC which has completed two years from the date of incorporation, can apply for converting itself into a Private Limited Company.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+					<button class="accordion">
+						What happen if I fail to convert my OPC ?
+					</button>
+					<div class="panel">
+						<p>
+							One Person Company shall be required to convert within 6 months from the date on which the criterion become infringed in a private limited company or a public Company.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						4 Step Process to Register your Company
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>Apply For DSC</b>
+					</h5>
+					<h5>
+						<b>We Prepare The Docs</b>
+					</h5>
+					<h5>
+						<b>We Submit The Documents</b>
+					</h5>
+					<h5>
+						<b>Certificate Of Incorporation</b>
+					</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,422 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.processsection').offset().top;
+			border= border-350;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						Trademark Registration
+					</h1>
+					<hr class="headhr">
+					<p class="main-head-text">
+						APPLY FOR TM
+						For Just Rs ­­­­20,000 All-Inclusive
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection" style="text-align: justify;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						TradeMark Registration
+					</h3>
+					<hr class="h3headings">
+					<p>
+						If you have developed a brand name and logo for your company and if you want to safeguard it from being used by others, then you have to apply for trademark registration. A trademark (popularly known as brand name in layman’s language) is a visual symbol which may be a word to indicate the source of the goods, a signature, name, device, label, numerals, or combination of colours used, or services, or other articles of commerce to distinguish it from other similar goods or services originating from another.
+					</p>
+					<p>
+						A trademark registration provides a protection to the owner of the brand or mark by ensuring exclusive right on it or you can even authorize any other person to use your mark or brand name in return of payment. You can register your logo, brand name and tag line all three in single application. A trademark application can be made within three working days and after applying you can start using ™ symbol, but it would take at least two years for you to get a registered trademark, then you can use ® symbol.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Documents Required for Company Registration
+					</h3>
+					<hr class="h3headings">
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Logo
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Brand Name
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Tag Line(Optional)
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Power of Attorney
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection" style="text-align: justify;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						Trademark Search
+					</h3>
+					<hr class="h3headings">
+					<div class="knowgroup">
+						<p>
+							Before making an application for registration, it is prudent to make an inspection of the already registered trademarks to ensure that registration may not be denied in view of resemblance of the proposed mark to an existing one or prohibited one. It is advisable that a common law search should also be conducted in order to ascertain if there are any third parties that might already be using the trademark. You can check yourselves the availability of your brand name through trademark public search.
+						</p>
+					</div>
+					<h3>
+						Trademark Application (3 working days)
+					</h3>
+					<hr class="h3headings">
+					<div class="knowgroup">
+						<p>
+							The registration procedure in India is based on the ‘first to file’ system. It is therefore important that the rights holder applies for the registration of its mark as soon as possible. The registration of a trademark in India typically takes about 1 to 2 years, subject to the trademark not being opposed by a third party.
+						</p>
+						<p>
+							The Office of the Controller General of Patents, Designs and Trademarks is the appropriate office for filing of a trademark application in India. This office has branches in Mumbai, Delhi, Chennai, Ahmedabad and Kolkata. A trademark application can be made through online, what we require from you is your logo, brand name and your tag line (if available). Logo has to be sent to us in JPEG format only.
+						</p>
+						<p>
+							A trademark has to be registered under particular class or category, there are almost 45 classes available, so you have to disclose us your business activity so that we could apply to the suitable class. Power of Attorney which we send has to be signed and sent to us back, so that we could able to file Form TM-1. After filing the necessary forms we will share you the acknowledgment copy and the application number will be allotted after two working days.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style type="text/css">
+		/* Style the buttons that are used to open and close the accordion panel */
+		button.accordion {
+			background-color: #99ddff;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			border-bottom-color: rgb(255, 255, 255);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		.accordion{
+			border: 1px solid #1a1a1a;
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		button.accordion.active, button.accordion:hover {
+			background-color: #66b3ff;
+		}
+		.panel {
+			margin-bottom: 0px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        	panel.style.display = "none";
+        } else {
+        	panel.style.display = "block";
+        }
+    }
+}
+</script>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs</h2><hr class="h3headings">
+				<div>
+					<button class="accordion">
+						What is Trademark?
+					</button>
+					<div class="panel">
+						<p>
+							Any symbol, word, name, device, numerals or combination of both, which can be represented graphically can be registered as trademark. A trademark is unique symbol which distinguish your goods or services from others.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Does application made for my trademark would be approved without any rejection?
+					</button>
+					<div class="panel">
+						<p>
+							Since it is a Government process, the acceptance of your application rest in the hands of the Government. We can conduct trademark search and apply on behalf of you, but we cannot guarantee that your trademark would not be rejected.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Can I apply for my logo, name and tag line in single application?
+					</button>
+					<div class="panel">
+						<p>
+							Yes, you can apply for your logo, name and tag line or caption in one application. But care has to be taken while suggesting you name and tag line as it should not reflect any previous trademark or reputed brand.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Does my trademark would be valid outside India ?
+					</button>
+					<div class="panel">
+						<p>
+							No, Trademark registered in India, would be valid only in India.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Whom shall can apply for Trademark ?
+					</button>
+					<div class="panel">
+						<p>
+							Any person who claims to be the owner of the trademark, which is proposed to be used can apply for trademark. A person can be an individual, NGO, Company or Partnership firm.
+						</p>
+					</div>
+
+					<button class="accordion">
+						When do I get my Trademark Registered ?
+					</button>
+					<div class="panel">
+						<p>
+							A Trademark normally takes 18 to 24 months to get registered, this is due to stringent process followed by the Trademark Registry.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What are the documents required for trademark application ?
+					</button>
+					<div class="panel">
+						<p>
+							A soft copy of the logo along with name and tag line (if any) has to be sent to us through email. A Power of attorney would be sent by us for your signature and kindly sign and send back the POA. Rest we shall take care.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How long does it take for registration of trademark after applying ?
+					</button>
+					<div class="panel">
+						<p>
+							As soon as you have applied for trademark, you can start using the symbol TM. Usually it takes 15 to 20 months for reviewing your application. After that if there is no objection they will release your name in the official Gazette, and after that you can use (R) symbol.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is an Objection ?
+					</button>
+					<div class="panel">
+						<p>
+							An objection is raised by the Trademark Registry in order to enquire about your usage of TM. For this you have to appear for hearing, but we would take care of the hearing by appointing an Trademark attorney for your case. After the hearing if Trademark Registry satisfied with you then they would approve your application, if not, there are possibilities for rejecting your Trademark application.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How can I apply for Trademark through Dobiz India?
+					</button>
+					<div class="panel">
+						<p>
+							Very simple, just send us your logo or name to us as a soft copy. We would conduct a Trademark search on behalf of you and let you know whether the said TM is available or not. After that we would apply for Trademark through online on behalf of you and you can remit us the payment to our account directly.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						4 Step Process to Register your Company
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>Apply For DSC</b>
+					</h5>
+					<h5>
+						<b>We Prepare The Docs</b>
+					</h5>
+					<h5>
+						<b>We Submit The Documents</b>
+					</h5>
+					<h5>
+						<b>Certificate Of Incorporation</b>
+					</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>

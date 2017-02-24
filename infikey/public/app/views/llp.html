@@ -1,0 +1,516 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.processsection').offset().top;
+			border= border-350;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						Limited Liability Partnership
+					</h1>
+					<hr class="headhr">
+					<p class="main-head-text">
+						LLP is an alternative corporate business form that gives the benefits of limited liability of a company and the flexibility of a Partnership. The LLP is a separate legal entity, is liable to the full extent of its assets but liability of the partners is limited to their agreed contribution in the LLP. Further, no partner is liable on account of the independent or un-authorized actions of other partners, thus individual partners are shielded from joint liability created by another partner’s wrongful business decisions or misconduct.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Requirements For Limited Liability Partnership
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						PARTNER
+					</h4>
+					<p>
+						At least 2 persons (natural or artificial) are required to form a LLP. In case any Body Corporate is a partner, than he will be required to nominate any person (natural) as its nominee for the purpose of the LLP.
+						Following can become a partner in the LLP:
+							<ul>
+								<li>
+									Company incorporated in and outside India.
+								</li>
+								<li>
+									LLP incorporated in & outside India.
+								</li>
+								<li>
+									Individual resident in & outside India.
+								</li>
+							</ul>
+					</p>
+					<h4>
+						DESIGNATED PARTNERS
+					</h4>
+					<p>
+						‘Designated Partner’ means a partner who is designated as such in the incorporation documents or who become a designated partner by and in accordance with the Limited Liability Partnership Agreement.<br>
+						Every limited liability partnership shall have at least two designated partners who are individuals and at least one of them shall be a resident in India.
+					</p>
+					<h4>
+						CONTRIBUTION
+					</h4>
+					<p>
+						In case of LLP, there is no concept of any share capital but every partner is required to contribute towards the LLP in some manner. The said contribution can be tangible, movable or immovable or intangible property or other benefit to the limited liability partnership, including money, promissory notes, and other agreements to contribute cash or property, and contracts for services performed or to be performed.
+					</p>
+					<h4>
+						REGISTERED OFFICE 
+					</h4>
+					<p>
+						The Registered office of the LLP is the place where all correspondence related with the LLP would take place, though the LLP can also prescribe any other for the same. A registered office is required for maintaining the statutory records and books of Account of LLP.<br>
+						At the time of incorporation, it is necessary to submit proof of ownership or right to use the office as its registered office with the Registrar of LLP.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Documents Required for Company Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						<b>Scanned copy of the following documents has to be provided by the promoters of the company:</b>
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN card copy with Self attestation
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Voter Id copy or Passport copy or Aadhar card copy or Driving license copy with self attestation.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Latest Bank account statement or Mobile /Telephone bill or Electricity Bill (not older than two months)- no need for self attestation.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Latest passport size photo in jpeg.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						For the registered office proof of the company, if the property is rented/ leased, then copy or rental agreement or lease agreement.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of Electricity bill or Property Tax receipt or Water Tax receipt not older than two months.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of No objection certificate from the owner of the property.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						If owned property, copy of Sale Deed and Electricity bill is sufficient.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						In case of NRI or Foreign national, Passport copy has to be notarized at the Indian Embassy of the particular country.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Utility bill has to be provided of the particular country where the NRI or Foreign national resides and it should be notarized.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						Advantages of Limited Liability Partnership
+					</h3>
+					<hr class="h3headings">
+					<div style="float: left;">
+						<img src="assets/img/img1.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Renowned Form Of Business
+						</h4>
+						<p>
+							Though the concept of Limited Liability Partnership has been recently introduced in India but it is very known concept in other countries of the world especially in service sector. In a normal partnership firm, there is always a threat of being liable to the act of your partner, but in case of LLP, there is no such threat.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img2.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Body Corporate
+						</h4>
+						<p>
+							Just like a Company, LLP is also body corporate, which means it has its own existence as compared to partnership. LLP and its Partners are distinct entity in the eyes of law. LLP will know by its own name and not the name of its partners.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img3.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Raising Money
+						</h4>
+						<p>
+							Financing a small business like sole proprietorship or partnership can be difficult at times. A LLP being a regulated entity like company can attract finance from PE Investors, financial institutions etc.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style type="text/css">
+		/* Style the buttons that are used to open and close the accordion panel */
+		button.accordion {
+			background-color: #99ddff;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			border-bottom-color: rgb(255, 255, 255);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		.accordion{
+			border: 1px solid #1a1a1a;
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		button.accordion.active, button.accordion:hover {
+			background-color: #66b3ff;
+		}
+		.panel {
+			margin-bottom: 0px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        	panel.style.display = "none";
+        } else {
+        	panel.style.display = "block";
+        }
+    }
+}
+</script>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs</h2><hr class="h3headings">
+				<div>
+					<button class="accordion">
+						What is a Limited Liability Partnership ?
+					</button>
+					<div class="panel">
+						<p>
+							A LLP is a new form of legal business entity with limited liability. It is an alternative corporate business vehicle that gives the benefits of limited liability but allows its partners the flexibility of organizing their internal structure as a traditional partnership. The LLP is a separate legal entity and, while the LLP itself will be liable for the full extent of its assets, the liability of the partners will be limited.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Concept of “limited liability partnership” ?
+					</button>
+					<div class="panel">
+						<p>
+							LLP is an alternative corporate business form that gives the benefits of limited liability of a company and the flexibility of a partnership.
+							<ul>
+								<li>
+									The LLP can continue its existence irrespective of changes in partners. It is capable of entering into contracts and holding property in its own name.
+								</li>
+								<li>
+									The LLP is a separate legal entity, is liable to the full extent of its assets but liability of the partners is limited to their agreed contribution in the LLP.
+								</li>
+								<li>
+									Further, no partner is liable on account of the independent or unauthorized actions of other partners, thus individual partners are shielded from joint liability created by another partner’s wrongful business decisions or misconduct.
+								</li>
+								<li>
+									Valid proof for the registered office of the company.
+								</li>
+								<li>
+									Mutual rights and duties of the partners within a LLP are governed by an agreement between the partners or between the partners and the LLP as the case may be. The LLP, however, is not relieved of the liability for its other obligations as a separate entity.
+								</li>
+							</ul>
+							Since LLP contains elements of both ‘a corporate structure’ as well as ‘a partnership firm structure’ LLP is called a hybrid between a company and a partnership.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How can apply for reserving a LLP name ?
+					</button>
+					<div class="panel">
+						<p>
+							File LLP Form No. 1 (Application for reservation or change of name) by logging on to the LLP portal along with the fee prescribed and attaching the digital signature of the designated partner proposing to incorporate a LLP.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Can a minor be appointed as a Partner in a LLP ?
+					</button>
+					<div class="panel">
+						<p>
+							The Designated Partners needs to be over 18 years of age and must be a natural person. Even foreign nationals can be appointed as a Partner with the approval for Foreign Contribution Promotional Board.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is the time frame for registering my LLP ?
+					</button>
+					<div class="panel">
+						<p>
+							Infikey can register a LLP within 12 to 15 days of time. But the documents submitted should be as per our requirements and also within time. If there is any delay in submitting the docs the mentioned time frame may change.						</p>
+					</div>
+
+					<button class="accordion">
+						When to use a LLP ?
+					</button>
+					<div class="panel">
+						<p>
+							LLP can provide an ideal structure for numerous businesses — not simply professional practices as is a common misconception. The only activities that cannot adopt LLP status are those that are unlawful, not intended to be profitable and which do not constitute the carrying on of a trade, profession, service or occupation.
+						</p>
+						<p>
+							The essence of a LLP for practical purposes is as a vehicle to contain a partnership of any size where partners may be at risk from the careless or accidental negligence of a colleague. For example, partners in accountancy firms would be protected from personal liability if a claim was successfully pursued by a major client. Partners in a construction business would be protected if a new building collapsed, causing high level claims against them.
+						</p>
+						<p>
+							Other partnerships may be tempted to use a LLP for the same reason. A LLP may also be appropriate for a partnership where some partners are not actively involved. They might have once been called "sleeping" partners. This structure will be suitable for a group of people engaging together in a property or finance venture. A LLP is unlikely to be useful for a small trading company of any sort because a conventional limited company is likely to perform an appropriate role at less cost.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What does limited liability mean ?
+					</button>
+					<div class="panel">
+						<p>
+							It limits personal liability of the partners of a LLP. It means that in most situations the debts and obligations of the business engaged in by the LLP are not the personal responsibility of the partners — the debts and obligations of the business can only be paid from the income and assets of the LLP. Of course, if a business operated by a LLP has financial difficulties, each partner of the LLP could lose the amount of his or her investment in the LLP, as well as the equity built up in the business. Beyond this, however, no partner risks the loss of his or her other assets and income.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Who can form a limited liability partnership ?
+					</button>
+					<div class="panel">
+						<p>
+							The Act generally allows two or more persons associated for carrying on a lawful business with a view to profit to form a limited liability partnership by subscribing to its incorporation document — Form 2. In law, 'person' includes individuals and companies. However, LLP are not available for all activities such as non-profit-making activities.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Will LLPs be available to charities ?
+					</button>
+					<div class="panel">
+						<p>
+							No. LLPs are only available to any lawful business that is carried out with a view to a profit.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Can Partnership firm convert itself into a LLP ?
+					</button>
+					<div class="panel">
+						<p>
+							Yes, you can convert your existing Partnership firm into a Limited Liability Partnership. The process is also very simple and not cumbersome.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						4 Step Process to Register your Company
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>Apply For DSC</b>
+					</h5>
+					<h5>
+						<b>We Prepare The Docs</b>
+					</h5>
+					<h5>
+						<b>We Submit The Documents</b>
+					</h5>
+					<h5>
+						<b>Certificate Of Incorporation</b>
+					</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>

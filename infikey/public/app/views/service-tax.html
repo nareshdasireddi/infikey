@@ -1,0 +1,488 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.whyinfisection').offset().top;
+			border= border-350;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						SERVICE TAX
+					</h1>
+					<hr class="headhr">
+					<p class="main-head-text">
+						Service tax refers to tax collected by the government of India from certain service providers for providing certain services. The person who pays service tax can be either a service provider or a service receiver or any other person who is responsible for providing certain services.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<ul>
+						<li>
+							Service tax. It is a tax levied on services provided in India, except the State of Jammu and Kashmir. The responsibility of collecting the tax lies with the Central Board of Excise and Customs(CBEC)
+						</li>
+						<li>
+							Every person, providing any of the specified taxable service is required to pay Service Tax. Service Tax being an indirect tax, its burden is to be borne by the person who receives services, but it is to be collected and paid to Government Exchequer by the service provider.
+						</li>
+						<li>
+							No. There is no general exemption provided to Central/State Government Departments/PSUs. Government department whether Central or State have to pay Service Tax to the provider of the service from whom any of the specified services are received by the Government department/PSUs.
+						</li>
+					</ul>
+					<h4>
+						Payment Schedule For Service Tax
+					</h4>
+					<ul>
+						<li>
+							Monthly – Service Tax is to be paid by 5th of the month immediately following the calendar month in which the payments are received.
+						</li>
+						<li>
+							Quarterly – In case of an individual or proprietary firm or partnership firm by the 5th of the month immediately following the quarter in which payments are received.
+						</li>
+						<li>
+							In all cases the tax payable for the month of March or quarter ending March shall be paid by 31st March of the calendar year.
+						</li>
+						<li>
+							Education cess @ 2% of the Service Tax levied and collected is to be paid.
+						</li>
+						<li>
+							Education Cess should be shown separately in the TR-6 challan
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Documents Required For Service Tax Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						<b>The application shall be accompanied by copies of the following documents</b>
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Self certified copy of PAN, (where allotment is pending, copy of the application for PAN may be given).
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of MOA/AOA in case of Companies
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of Board Resolution in case of Companies
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of Lease deed/Rental agreement of the premises
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						A brief technical write up on the services provided
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Registration certificate of Partnership firm / Partnership Deed
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of a valid Power of Attorney where the owner/MD/Managing Partner does not file the application
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Power of Attorney in favor of the Consultant (POA)
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						Procedure For Service Tax Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						NEW ASSESSEE
+					</h4>
+					<ol start="1">
+						<li>
+							Kindly go to www.aces.gov.in> Select Central Excise / Service Tax
+						</li>
+						<li>
+							Then Assessee will find the following screen where in he has to fill in Relevant Details
+						</li>
+						<li>
+							After entering the details, press Submit button for submitting the data for further processing
+						</li>
+						<li>
+							After submit, Assessee will find the Screen in aces.
+						</li>
+						<li>
+							You will be sent the user name and password to the given email ID within 3 to 24 hours.
+						</li>
+						<li>
+							Sample Message description which will be sent to Assessee’s registered e-mail id is shown for reference
+						</li>
+						<li>
+							This is to inform you that the user has been created. The User Name and the Password for the new user are: User Name -ltu_new1, Password –ohSwZk”
+						</li>
+					</ol>
+					<h4>
+						Important Notes
+					</h4>
+					<ul>
+						<li>
+							If you don’t receive the username and password even after 24 hours, Please check the Spam/Junk mail folders of your e-mail account for the TPIN mail (as it is possible that the same would have been marked as spam by the e-mail service provider). If the problem of non-receipt of user ID and password persists, please try with fresh/new user name, fill the form and submit as detailed above.
+						</li>
+						<li>
+							Still if you face problem, Contact helpdesk (aces.servicedesk@icegate.gov.in) for assistance.)Now, Assessee can login into ACES using the username and password received in the mail.
+						</li>
+						<li>
+							After Login, Assessee will find the below screen, wherein he is prompted to change the password and enter a new password of his choice.
+						</li>
+						<li>
+							Please press the Submit button to complete the process.
+						</li>
+						<li>
+							It is advised that for accessing ACES Application, please use Internet Explorer
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--<style type="text/css">
+		/* Style the buttons that are used to open and close the accordion panel */
+		button.accordion {
+			background-color: #99ddff;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			border-bottom-color: rgb(255, 255, 255);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		.accordion{
+			border: 1px solid #1a1a1a;
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		button.accordion.active, button.accordion:hover {
+			background-color: #66b3ff;
+		}
+		.panel {
+			margin-bottom: 0px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        	panel.style.display = "none";
+        } else {
+        	panel.style.display = "block";
+        }
+    }
+}
+</script>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs on Private Limited Company</h2><hr class="h3headings">
+				<div>
+					<button class="accordion">
+						How many members do I need to register my Private Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							To register a Private Limited Company, you need at least two members are required. A Private Limited Company should have at least two Directors and Shareholders, where both Directors and shareholders can be the same person.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is DIN- Director Identification Number ?
+					</button>
+					<div class="panel">
+						<p>
+							DIN stands for Director Identification Number, which is mandatory for a person becoming a Director of a company. Without getting DIN you cannot become a Director for your company.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Why should I need to have a Digital Signature ?
+					</button>
+					<div class="panel">
+						<p>
+							A digital signature (DSC) is used to sign the e-forms, which is in PDF format, on behalf of you by us for making application to register your company. A DSC is mandate for the Directors of the company.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How much money do I need to invest to start a Private Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							You have to start an Private Company with an initial capital of Rs. 1 lakh. The said amount need not be cash, and we can show it in the books of accounts alone. Only thing you need to do is to start a bank account on company name once the incorporation is over.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is the advantage of registering a Private Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							The main advantage is Limited Liability. Since, company is a separate legal entity, any loss or debt will not affect your personal properties, no one can force you to sell your personal properties and repay the debts.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is the validity of the registration certificate ?
+					</button>
+					<div class="panel">
+						<p>
+							A Certificate of Incorporation is a valid certificate and you don’t need to renew it at any time. The Certificate is valid for your lifetime. Only thing to look after is that you file the returns for the company properly with RoC (Registrar of Companies) and keep the status of the company ‘active’.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How do I provide you the documents ?
+					</button>
+					<div class="panel">
+						<p>
+							You can send us the soft copies of the documents, only hard copy we require from you is the DSC application. We would mail you the application, kindly sign the application, please don’t fill the form and courier it to our office address.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What kind of services will provide after Company Incorporation ?
+					</button>
+					<div class="panel">
+						<p>
+							We will inform you regarding the post-incorporation compliance to be followed after incorporation. Also we will manage your company, which you can get it by subscribing our basic retainer package.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How much time does it take to register a Private Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Time taken would be 15 to 20 working days only if all the required documents have been given to us should be in order. If there is any delay from your side to send us the documents, then this time frame might change.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Does I need to set up a separate office to register my company ?
+					</button>
+					<div class="panel">
+						<p>
+							No, you can even use your residential address as your company registered office address. But, you need to hold proper address proof such as Electricity Bill, rental agreement/lease agreement etc.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						4 Step Process to Register your Company
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>Apply For DSC</b>
+					</h5>
+					<h5>
+						<b>We Prepare The Docs</b>
+					</h5>
+					<h5>
+						<b>We Submit The Documents</b>
+					</h5>
+					<h5>
+						<b>Certificate Of Incorporation</b>
+					</h5>
+				</div>
+			</div>
+		</div>
+	</section>-->
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html ng-app="userApp">
+<head>
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>InfiKey</title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+	<script src="/app/routes/routes.js"></script>
+	<script src="/app/app.js"></script>
+	<script src="/app/controllers/getStartedCtrl.js"></script>
+	<script src="https://use.fontawesome.com/17e8055ec3.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/templatestyle.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="logo" ></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right menu">
+					<li class="dropdown">
+						<a href="#">Startup <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#pvt-ltd">Private Limited Company</a></li>
+							<li><a href="#public-ltd">Public Limited partnership</a></li>
+							<li><a href="#llp">Limited Liability Partnership</a></li>
+							<li><a href="#one-person">One Person Company</a></li>
+							<li><a href="#">Partnership Firm</a></li>
+							<li><a href="#">Proprietorship Firm</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#">Compliance<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-one">
+								<a href="#">Secretarial Services</a>
+								<ul class="dropdown-menu-one">
+									<li><a href="#compliance-pvt">Compliance For Private Limited Companies</a></li>
+									<li><a href="#">Annual Returns And Filing For Pvt Ltd Co</a></li>
+									<li><a href="#">Annual Returns And Filings For LLP</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-two">
+								<a href="#">Change Services</a>
+								<ul class="dropdown-menu-two">
+									<li><a href="#">Add Or Remove A Director</a></li>
+									<li><a href="#">Increase In Authorised Capital</a></li>
+									<li><a href="#">Change In Name And Main Object Of The Company</a></li>
+									<li><a href="#">Change In Registered Office</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-three">
+								<a href="#">Conversion Services</a>
+								<ul class="dropdown-menu-three">
+									<li><a href="">Partnership Firm To LLP</a></li>
+									<li><a href="#pvt-public">Private Limited To Public Limited</a></li>
+									<li><a href="">OPC To Private Limited</a></li>
+									<li><a href="">Private Limited To OPC</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-four">
+								<a href="#">Closure</a>
+								<ul class="dropdown-menu-four">
+									<li><a href="">Closure Of Private Limited Company</a></li>
+									<li><a href="#closure-llp">Closure Of LLP</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#">Taxation<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#goods-servicetax">Goods & Service Tax Registration <span class="badge">New</span></a></li>
+							<li><a href="#vat-reg">VAT Registration</a></li>
+							<li><a href="#service-tax">Service Tax Registration</a></li>
+							<li><a href="#sales-tax">Sales Tax Registration</a></li>
+							<li><a href="#">VAT Returns Filing</a></li>
+							<li><a href="#">Service Tax Returns Filing</a></li>
+							<li><a href="#">Shops & Establishment Registration</a></li>
+							<li><a href="#">Importer Exporter code</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#">Intellectual Property<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#trademark">Trademark Registration</a></li>
+							<li><a href="#">Trademark Renewal</a></li>
+							<li><a href="#copyright">Copyright Registration</a></li>
+							<li><a href="#">Patent Search</a></li>
+							<li><a href="#">Provisional Patent</a></li>
+							<li><a href="#patent">Patent</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#">Legal Doc <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="list-head"><strong>Corporate Agreements</strong></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Share Holder's Agreement</a></li>
+							<li><a href="#">Share Purchase Agreement</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="list-head"><strong>Business Agreements</strong></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Non-Disclosure Agreement</a></li>
+							<li><a href="#">Memorandum Of Understanding</a></li>
+							<li><a href="#">Joint Venture Agreement</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Reach Us</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div ng-view>
+		
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-12 col-lg-3">
+					<h4 class="fheadings">
+						START A BUSINESS
+					</h4>
+					<hr>
+					<p>
+						<a href="#">Private Limited Company</a>
+					</p>
+					<p>
+						<a href="#">Limited Liability Partnership</a>
+					</p>
+					<p>
+						<a href="#">One Person Company</a>
+					</p>
+					<p>
+						<a href="#">Partnership Firm</a>
+					</p>
+					<p>
+						<a href="#">Proprietorship Firm</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12 col-lg-3">
+					<h4 class="fheadings">
+						TRADEMARK & COPYRIGHT
+					</h4>
+					<hr>
+					<p>
+						<a href="#">Trademark Registration</a>
+					</p>
+					<p>
+						<a href="#">Trademark Objection</a>
+					</p>
+					<p>
+						<a href="#">Trademark Assignment</a>
+					</p>
+					<p>
+						<a href="#">Trademark Renewal</a>
+					</p>
+					<p>
+						<a href="#">Copyright Registration</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12 col-lg-3">
+					<h4 class="fheadings">
+						GOVT & TAX REGISTRATION
+					</h4>
+					<hr>
+					<p>
+						<a href="#">VAT Registration</a>
+					</p>
+					<p>
+						<a href="#">Service Tax Registration</a>
+					</p>
+					<p>
+						<a href="#">Importer Exporter Code</a>
+					</p>
+					<p>
+						<a href="#">Professional Tax Registration</a>
+					</p>
+					<p>
+						<a href="#">Shops & Establishments Registration</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12 col-lg-3 ">
+					<h4 class="fheadings">
+						LEGAL DOCUMENTATION
+					</h4>
+					<hr>
+					<p>
+						<a href="#">Non-Disclosure Agreement</a>
+					</p>
+					<p>
+						<a href="#">Founders' Agreement</a>
+					</p>
+					<p>
+						<a href="#">Term Sheet</a>
+					</p>
+					<p>
+						<a href="#">Shareholders' Agreement</a>
+					</p>
+					<p>
+						<a href="#">Share Purchase Agreement</a>
+					</p>
+				</div>
+			</div>
+			<hr class="normalline">
+			<div class="row">
+				<div class="col-md-8 col-sm-8 col-xs-12 col-lg-8">
+					<div class="row">
+						<div class="col-md-2 col-sm-2 col-xs-12 col-lg-2">
+							<a href="#">About Us</a>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 col-lg-2">
+							<a href="#">Contact Us</a>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 col-lg-2">
+							<a href="#">Partner with Us</a>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 col-lg-2">
+							<a href="#">Satisfaction Gaurantee</a>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 col-lg-2">
+							<a href="#">Blog</a>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 col-lg-2">
+							<a href="#">Site Map</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 col-lg-4">
+					<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					</div>
+					<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					</div>
+					<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+						<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<hr class="normalline">
+			<div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 footertext">
+				<a href="#"><h5>
+					Starting a Business
+				</h5></a>
+				<p>
+					Many founders are confused about what kind of entity to register when they start their business. Should it be a private limited company, limited liability partnership, partnership firm, one person company or a sole proprietorship. Each of these has very specific advantages and disadvantages. There is no one type for all businesses. A private limited company registration, for example, would be a good fit for any venture that will look for funding at a later stage. You can contact Infikey for all the advice you need. We assure you of great service at a reasonable price.
+				</p>
+			</div>
+			<div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 footertext">
+				<a href="#"><h5>Intellectual Property</h5></a>
+				<p>
+					In modern business, there is no other asset as valuable as intellectual property, and yet so many startups end up neglecting it. But this is surely not advisable, as trademarks, copyrights and patents ensure that you have sole rights to your creation, be it your brand, your designs or your inventions. At Infikey, we are well equipped to handle all your IP requirements. We perform trademark registrations in just three days, can file a copyright registration for all your software, pictures, audio and video content, and can connect you to patent attorneys to conduct a patent search and file your patent applications.
+				</p>
+			</div>
+			<div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 footertext">
+				<a href="#"><h5>
+					Government Registrations
+				</h5></a>
+				<p>
+					In India, you need a license for everything in business. Started a manufacturing business? You need a VAT registration (earlier known as sales tax) and CST registration. Started a service business? You need a Service Tax registration. Have employees? You need a Professional Tax registration and Shops & Establishments Act Registration. If that's not enough, you also need to file VAT Returns, Service Tax Returns and Professional Tax Returns.
+				</p>
+			</div>
+			<div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 footertext">
+				<a href="#"><h5>
+					Legal Documentation
+				</h5></a>
+				<p>
+					The worst way to approach business is to just get into new partnerships and arenas without examining consequences. By getting a lawyer to draft contracts or agreements with new vendors, employees and investors, you're ensuring that you have all the downsides covered. At Infikey, we can deliver complex documents, from shareholders' agreements and founders' agreements to terms of service/privacy policy and non-disclosure agreements, at a reasonable cost in a few days' time. Well-known startups, such as Holachef and Big Basked, have done their documentation work through us.
+				</p>
+			</div>
+			<div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 footertext">
+				<a href="#"><h5>
+					Mandatory Compliance
+				</h5></a>
+				<p>
+					It's not enough to have started a private limited company or LLP. You need to comply with all the requirements of the Ministry of Corporate Affairs and Income Tax Act once you do. You need to inform them of every relevant change you make, whether it is adding a director, removing a partner or increasing authorised share capital. You also need to file annual returns and maintain your accounts. In the case of a private limited company, you even need them audited. At Infikey, we perform all these services completely online. Which means you can pay us a retainer for the year and we'll complete all the formalities for you while you focus on your business.
+				</p>
+			</div>
+			<hr class="normalline">
+			<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 text-center">
+				<p>
+					<span class="sub">&copy; Copyright 2017 - Powered by <a href="www.mtwlabs.com">MTW LABS</a></span>
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

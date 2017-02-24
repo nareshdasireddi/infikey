@@ -1,0 +1,531 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.processsection').offset().top;
+			border= border-350;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						One Person Company Registration
+					</h1>
+					<hr class="headhr">
+					<p class="main-head-text">
+						One Person Company is a unique concept introduced by the Ministry of Corporate Affairs in order to encourage the small traders and entrepreneurs. With passage of time, the OPC mode of business organisation is all set to become the most preferred form of business organization especially for small entrepreneurs. The One Person Companyconcept holds a bright future for small traders, entrepreneurs with low risk taking capacity, artisans and other service providers.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="vatfactssection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Requirements For One Person Company
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						ONLY ONE SHAREHOLDER
+					</h4>
+					<p>
+						A natural person, who is a citizen of India, shall be eligible for registering a One Person Company. Also the person should be resident of India, which means who has stayed in India for a period of not less than 182 days during the immediately preceding calendar year.
+					</p>
+					<h4>
+						NOMINEE
+					</h4>
+					<p>
+						The shareholder/owner of the company shall appoint another person as the nominee, who will become the shareholder in case of death or incapacity of the original shareholder. Only a natural person, who is an Indian citizen and resident in India, shall be a nominee for the sole member of a One Person Company.
+					</p>
+					<h4>
+						NAME OF YOUR COMPANY
+					</h4>
+					<p>
+						Naming your company is the crucial part; a company name has two parts Prefix and a Suffix. Prefix must be unique and different, while Suffix should reflect the business nature of your company. To know your name availability check yourself with Ministry of Corporate Affairs website under company name search.
+					</p>
+					<h4>
+						REGISTERED OFFICE PROOF
+					</h4>
+					<p>
+						When registering a company, should have a valid address to proof. If you are in Bangalore and you have proper address proof in Pune, then you can register your company in Pune and start your Business operations from Bangalore. Proper registered office proof is mandatory for registering your company.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						Documents Required for Company Registration
+					</h3>
+					<hr class="h3headings">
+					<h4>
+						<b>Scanned copy of the following documents has to be provided by the promoters of the company:</b>
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN card copy with Self attestation
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Voter Id copy or Passport copy or Aadhar card copy or Driving license copy with self attestation.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Latest Bank account statement or Mobile /Telephone bill or Electricity Bill (not older than two months)- no need for self attestation.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Latest passport size photo in jpeg.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						For the registered office proof of the company, if the property is rented/ leased, then copy or rental agreement or lease agreement.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of Electricity bill or Property Tax receipt or Water Tax receipt not older than two months.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Copy of No objection certificate from the owner of the property.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						If owned property, copy of Sale Deed and Electricity bill is sufficient.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						In case of NRI or Foreign national, Passport copy has to be notarized at the Indian Embassy of the particular country.
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Utility bill has to be provided of the particular country where the NRI or Foreign national resides and it should be notarized.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="knowsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12" >
+					<h3>
+						Advantages of One Person Company
+					</h3>
+					<hr class="h3headings">
+					<div style="float: left;">
+						<img src="assets/img/img1.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Limited Liability
+						</h4>
+						<p>
+							In a Sole Proprietorship firm, the personal assets of the proprietor can be at risk in the event of failure, but this is not the case for a One Person Private Limited Company, as the shareholder liability is limited to his shareholding.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img2.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Legal Status
+						</h4>
+						<p>
+							The structure of OPC is that similar to Private Limited Company. Hence OPC also enjoys the corporate status which helps the entrepreneur to attract quality workforce and helps to retain themby giving corporate designations, like directorship.
+						</p>
+					</div>
+					<div style="float: left;">
+						<img src="assets/img/img3.png" style="width: 70px; height: 70px; margin-top: 10px;">
+					</div>
+					<div class="knowgroup">
+						<h4>
+							Free Compliances
+						</h4>
+						<p>
+							OPC form of company is very easy to manage. Only few filings are to be made with ROC and they are exempted from conducted Annual General Meeting. The Board Meetings can be conducted for every six months.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style type="text/css">
+		/* Style the buttons that are used to open and close the accordion panel */
+		button.accordion {
+			background-color: #99ddff;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			border-bottom-color: rgb(255, 255, 255);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		.accordion{
+			border: 1px solid #1a1a1a;
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		button.accordion.active, button.accordion:hover {
+			background-color: #66b3ff;
+		}
+		.panel {
+			margin-bottom: 0px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        	panel.style.display = "none";
+        } else {
+        	panel.style.display = "block";
+        }
+    }
+}
+</script>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs</h2><hr class="h3headings">
+				<div>
+					<button class="accordion">
+						What is a One Person company ?
+					</button>
+					<div class="panel">
+						<p>
+							A company registered by a single person, in which only one shareholder and Director will be present. Apart from that one nominee has to be appointed.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What are the requirements for starting a One Person Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Minimum requirement:
+							<ul>
+								<li>
+									One person, who should be a Indian resident and not an Foreign national or NRI.
+								</li>
+								<li>
+									Should start the company with minimum of Rs. 1 lac as paid up capital.
+								</li>
+								<li>
+									Valid proofs have to be obtained by the person, who is going to start the company.
+								</li>
+								<li>
+									Valid proof for the registered office of the company.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is the minimum number of Directors required ?
+					</button>
+					<div class="panel">
+						<p>
+							Minimum 1 Director is required for registration of an OPC.
+						</p>
+					</div>
+
+					<button class="accordion">
+						What is the maximum number of Director can be appointed in an OPC ?
+					</button>
+					<div class="panel">
+						<p>
+							Maximum 12 directors can be appointed by an OPC.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Is there any condition for choosing a name ?
+					</button>
+					<div class="panel">
+						<p>
+							There is a simple rule have to follow during choosing a name that the name should not be similar with any name registered previously and should be related to the business of the company.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Who are not eligible to register an OPC ?
+					</button>
+					<div class="panel">
+						<p>
+							<ul>
+								<li>
+									Minor – A minor cannot even hold beneficial interest in OPC.
+								</li>
+								<li>
+									Foreign National.
+								</li>
+								<li>
+									Overseas Citizen of India.
+								</li>
+								<li>
+									Non Resident Indian.
+								</li>
+								<li>
+									Company/LLP/Body Corporate.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+					<button class="accordion">
+						Whom can I appoint as Nominee ?
+					</button>
+					<div class="panel">
+						<p>
+							Nominee should be any Resident of India. The term "resident in India" means a person who has stayed in India for a period of not less than 182 days during the immediately preceding one calendar year.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How many types of OPC are there ?
+					</button>
+					<div class="panel">
+						<p>
+							There are 3 types of OPC’s –
+							<ul>
+								<li>
+									A company limited by shares
+								</li>
+								<li>
+									A company limited by guarantee
+								</li>
+								<li>
+									An unlimited company
+								</li>
+							</ul>
+						</p>
+					</div>
+
+					<button class="accordion">
+						Is it possible for me to convert OPC into Private Limited Company ?
+					</button>
+					<div class="panel">
+						<p>
+							Yes you can, if an OPC has the following requirements:
+							<ul>
+								<li>
+									Paid up share capital should exceed Rs 50 Lakhs or more.
+								</li>
+								<li>
+									Annual average turnover should not exceed Rs. 2 Crores in three immediate preceding consecutive years.
+								</li>
+								<li>
+									An OPC which has completed two years from the date of incorporation, can apply for converting itself into a Private Limited Company.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+					<button class="accordion">
+						What happen if I fail to convert my OPC ?
+					</button>
+					<div class="panel">
+						<p>
+							One Person Company shall be required to convert within 6 months from the date on which the criterion become infringed in a private limited company or a public Company.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						4 Step Process to Register your Company
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>Apply For DSC</b>
+					</h5>
+					<h5>
+						<b>We Prepare The Docs</b>
+					</h5>
+					<h5>
+						<b>We Submit The Documents</b>
+					</h5>
+					<h5>
+						<b>Certificate Of Incorporation</b>
+					</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,489 @@
+	<script type="text/javascript">
+			var wrap = $(window);
+			var border =  $('.typesregsection').offset().top;
+			border= border-500;
+
+		wrap.on("scroll", function(e) {
+
+		  	if (e.currentTarget.scrollY> border) {
+		   	$('#serviceid').css('position','absolute');
+		  	}else{
+		  	$('#serviceid').css('position','fixed');
+		  	}
+ 
+		});
+	</script>
+	<section class="headersection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-lg-7 col-xs-12">
+					<h1>
+						Goods & Service Tax Registration
+					</h1>
+					<hr class="headhr">
+					<h5 style="margin-top: 20px; margin-bottom: 20px;">
+						Make a smooth transition to the all-in-one tax by April 2017.
+					</h5>
+					<p style="margin-top: 10px;">
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i> We offer advice on all aspects related to GST and ensure the smartest transition to GST
+					</p>
+					<p style="margin-top: 10px;">
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i> We will ensure that all aspects of your business are compliant with GST
+					</p>
+					<p style="margin-top: 10px;">
+						<i class="fa fa-check-circle-o icon" aria-hidden="true"></i> We will file your returns and complete all other compliances as and when required
+					</p>
+					<p>
+						Talk to our representatives to clear all your doubts regarding GST. Simply fill in the form and we’ll get in touch.
+					</p>
+				</div>
+				<div class="col-md-5 col-sm-6 col-lg-5 col-xs-12 formcontact">
+					
+					<div class="serviceform" id="serviceid" ng-controller="getStartedCtrl">
+						<form name="userForm" class="form-horizontal formcustom" ng-submit="myData()">
+							<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+								<input type="text" ng-model="data.email" name="email" placeholder="Email Address*" class="form-control form-width" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.%-]+.[a-zA-Z]{2,4}$/" required>
+								 <p class="help-block" ng-show="(!userForm.email.$pristine && userForm.email.$error.required) || (userForm.$submitted && userForm.email.$error.required)">This field is required</p>
+                                    
+                                   
+                                    <ul ng-show="(!userForm.email.$pristine && userForm.email.$error.pattern) || (!userForm.email.$pristine && userForm.email.$error.minlength) || (!userForm.email.$pristine && userForm.email.$error.maxlength)" class="help-block">
+                                        <li>enter vaild Email</li>
+                                        <li>eg: xyz@email.com</li>
+                                       
+                                    </ul>
+							</div>
+							<div class="form-group"  ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+								<input type="text" ng-model="data.mobile" placeholder="Mobile Number*" class="form-control form-width"  name="mobile"   ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]{10,10}$/;"  required>
+								<p class="help-block" ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.required) || (userForm.$submitted && userForm.mobile.$error.required)">This field is required</p>
+                                 <ul ng-show="(!userForm.mobile.$pristine && userForm.mobile.$error.pattern) || (!userForm.mobile.$pristine && userForm.mobile.$error.minlength) || (!userForm.mobile.$pristine && userForm.mobile.$error.maxlength)" class="help-block">
+                                        <li>Must not contain any characters & <br/> special characters or spaces</li>
+                                        <li>please entere valid 10 mobile number digits</li>
+                                    </ul>
+								
+      
+							</div>
+							<div class="form-group selectcity">
+								<select class="form-control form-width" ng-model="data.city" required>
+									<option value="" disabled>
+										Select City*
+									</option>
+									<option value="Ballari">
+										Ballari
+									</option>
+									<option value="Bangalore">
+										Bangalore
+									</option>
+									<option value="Secundrabad">
+										Secundrabad
+									</option>
+									<option value="Chennai">
+										Chennai
+									</option>
+									<option value="Visakhapatnam">
+										Visakhapatnam
+									</option>
+									<option value="Hyderabad">
+										Hyderabad
+									</option>
+									<option value="Mysore">
+										Mysore
+									</option>
+									<option value="Vijayawada">
+										Vijayawada
+									</option>
+									<option value="Kalaburigi(Gulbarga)">
+										Kalaburigi(Gulbarga)
+									</option>
+								</select>
+							</div>
+							<div class="form-group submitbutn">
+								<button type="Submit" class="btn btn-md form-control form-width">Get Started</button>
+							</div>
+						</form>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="regsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						What is GST Registration?
+					</h3>
+					<hr class="h3headings">
+					<p>
+						Starting April 1, 2017, Goods & Services Tax (GST) will apply to all Indian service providers (including freelancers), traders and manufacturers, once their supply turnover crosses Rs. 20 lakh. The GST is an all-in-one tax that subsumes a variety of state (VAT, Entertainment Tax, Luxury Tax, Octroi) and central taxes (CST, Service Tax, Excise Duty). GST is to be charged at every step of the supply chain, with complete set-off benefits available. The procedure for GST is completely online and requires no manual intervention. There will also be a composition scheme under GST for businesses with a supply turnover of less than Rs. 50 lakh.
+					</p>
+					<h4>
+						Features of GST Registration
+					</h4>
+					<h5>
+						Taxes Subsumed by GST
+					</h5>
+					<p>
+						The GST will consolidate Central Excise Duty, Service Tax, VAT, Central Sales Tax, Customs Duty, Central Surcharge & Cess, Octroi, Luxury Tax, Entertainment Tax, Purchase Tax and a few other indirect taxes. The GST will apply on all goods and services. Even petrol and petroleum products will eventually be subject to it.
+					</p>
+					<h5>
+						GST Rates
+					</h5>
+					<p>
+						The GST council has decided on a four-tier structure. The GST rate will depend on the type of goods and services. Currently, the slab rates are 5%, 12%, 18% and 28%. The rate for gold is yet to be decided, and will likely to be the lowest of all.
+					</p>
+					<h5>
+						CGST & SGST
+					</h5>
+					<p>
+						GST will have a central component (Central Goods and Services Tax or CGST) and a state component (State Goods and Services Tax or SGST). Therefore, centre and state will levy GST on all entities. Inter-state transactions will attract the Integrated Goods and Services Tax (IGST), to be levied by the centre.
+					</p>
+					<h5>
+						GST Threshold
+					</h5>
+					<p>
+						Businesses with a supply turnover of over Rs. 20 lakh must register for GST. The key word here is supply, which takes into consideration any turnover, including stock-taking, discounts and freebies. In fact, even those supplying non-taxable goods must register for GST. Business making sales to other states must register for GST, regardless of turnover.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribesection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-xs-12 col-sm-12 col-lg-7">
+					<h3>
+						Get all the information in your inbox
+					</h3>
+					<hr class="h3headings">
+					<form action="" method="post" class="form-horizontal has-validation-callback">
+						<div class="col-md-8 col-sm-7 col-xs-6">
+							<input type="text" name="email" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="col-md-3 col-sm-5 col-xs-6">
+							<button class="btn btn-md sendbtn form-control">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="legaldocsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<p>
+						The list of documents required for registration of GST for various business are as follows:
+					</p>
+					<h4>
+						PROPRIETORSHIP
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN Card and address proof of proprietor
+					</p>
+					<h4>
+						LLP
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN Card of LLP
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						LLP Agreement
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Partners’ names and address proof
+					</p>
+					<h4>
+						PRIVATE LIMITED COMPANY
+					</h4>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Certificate of Incorporation
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						PAN of Company
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Articles of Association
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Memorandum of Association
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Resolution signed by board members
+					</p>
+					<p>
+						<i class="fa fa-check-circle icon" aria-hidden="true"></i>
+						Identity and address proof of directors
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style type="text/css">
+		/* Style the buttons that are used to open and close the accordion panel */
+		button.accordion {
+			background-color: #99ddff;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			border-bottom-color: rgb(255, 255, 255);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		.accordion{
+			border: 1px solid #1a1a1a;
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		button.accordion.active, button.accordion:hover {
+			background-color: #66b3ff;
+		}
+		.panel {
+			margin-bottom: 0px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+
+		/* Style the accordion panel. Note: hidden by default */
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        	panel.style.display = "none";
+        } else {
+        	panel.style.display = "block";
+        }
+    }
+}
+</script>
+	<section class="faqsection">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+				<h2>FAQs</h2><hr class="h3headings">
+				<div>
+					<button class="accordion">
+						Can i apply for GST Registration online?
+					</button>
+					<div class="panel">
+						<p>
+							Yes, you can apply for GST Registration online. You can simply register your business on the official GST portal and then scan and upload all the required documents. You will then receive an acknowledgement. A GSTIN will be generated on acceptance of the application and a temporary password and login will be sent. GSTIN is a unique 15-digit ID.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Is the GST threshold limit the same for all Indian states? 
+					</button>
+					<div class="panel">
+						<p>
+							The exemption limit is a supply turnover of Rs. 20 lakh for businesses in all but the Indian states in the northeast region. Businesses in Arunachal Pradesh, Assam, Meghalaya, Manipur, Mizoram, Nagaland and Tripura must get a GST registration if their supply turnover exceeds Rs. 10 lakh. As mentioned above, this threshold limit applies only to businesses that operate within their home state. A business that conducts trade with another state must seek registration regardless of turnover.
+						</p>
+					</div>
+
+					<button class="accordion">
+						How would the composition scheme work under GST? 
+					</button>
+					<div class="panel">
+						<p>
+							The composition scheme would be applicable to businesses with a turnover of up to Rs. 50 lakh. Such taxpayers would pay a fixed percentage of its turnover and cannot avail of the benefits of input tax credit. Such businesses cannot collect tax from its customers. The floor rate of tax cannot be less than 1%.
+						</p>
+					</div>
+
+					<button class="accordion">
+						Does GST apply to all businesses? 
+					</button>
+					<div class="panel">
+						<p>
+							Yes, GST applies to all service providers, manufacturers and traders. It extends to any dealers, bloggers, and writers, earnings from Google AdWords through PayPal, import-export businesses, all kinds of startups and companies, whether they are LLPs, proprietorships, partnerships or private limited companies. It also applies, regardless of the threshold limit, to:
+							1. Businesses operating outside their home state
+							2. A business not registered to the state
+							3. Businesses paying a reverse charge
+							4. Input service distributor
+							5. E-commerce operators
+							6. Aggregators selling services under own brand name (Ola, for example)
+							7. Online sellers
+							8. Suppliers or agents
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="processsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12 col-lg-7 col-xs-12">
+					<h3>
+						VAT Registration Process
+					</h3>
+					<hr class="h3headings">
+					<h5>
+						<b>2 WORKING HOURS</b>
+					</h5>
+					<p>
+						You need to send in PAN cards, identity, address proofs and four passport-sized photographs of the proprietor/partners/directors. Private limited companies must also submit the Memorandum and Articles of Association, Form 32, Form 18 and Certificate of Incorporation, while Partnerships must submit the Partnership Agreement. Finally, the rental agreement for the office address, if it is rented, along with the electricity bill.
+					</p>
+					<h5>
+						<b>2 WORKING DAYS</b>
+					</h5>
+					<p>
+						The application will be prepared by our representatives in two working days. It will then be filed and submitted to the authorities via our affiliates. We will be sent a basic acknowledgement within seven working days.
+					</p>
+					<h5>
+						<b>10 TO 25 WORKING DAYS</b>
+					</h5>
+					<p>
+						Your application will be processed by the department and may involve a physical inspection. Once approved, the Taxpayer Identitification Number (TIN), an 11-digit number, will be issued. A certificate will also be issued. We will courier it to you when it is received from the government department.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="typesregsection" id="typereg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Types of Government Registrations</h2>
+						<hr class="h2headings">
+					</div>
+					<div class="text-center  table-responsive">
+						<table class="table ">
+							<thead>
+								<tr>
+									<td style="border:0px;">              </td>
+									<td style="border:0px;"><strong>VAT Registration</strong></td>
+									<td style="border:0px;"><strong>Service Tax Registration</strong></td>
+									<td style="border:0px;"><strong>Importer-Exporter Code</strong></td>
+									<td style="border:0px;"><strong>Shops & Establishments Act</strong></td>
+									<td style="border:0px;"><strong>Profession Tax Registration</strong></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Who It's For</strong></td>
+									<td>Sellers of goods</td>
+									<td>Service providers</td>
+									<td>Importers & exporters</td>
+									<td>All businesses</td>
+									<td>All employers</td>
+								</tr>
+								<tr>
+									<td><strong>When You Need It</strong></td>
+									<td>When sales cross Rs. 5 lakh</td>
+									<td>When sales cross Rs. 9 lakh</td>
+									<td>For any imports or exports</td>
+									<td>Within 30 days of operations</td>
+									<td>Within 30 days of operations</td>
+								</tr>
+								<tr>
+									<td><strong>Returns to be Filed</strong></td>
+									<td>Yes</td>
+									<td>Yes</td>
+									<td>No</td>
+									<td>No</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td><strong>Issuing Authority</strong></td>
+									<td>State Government</td>
+									<td>State Government</td>
+									<td>Directorate General of Foreign Trade</td>
+									<td>Municipal Corporation</td>
+									<td>State Government</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+									<td><a href="#" class="btn btn-md knowmoretabbtn">Know More</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="whyinfisection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12 col-xs-12">
+					<div class="text-center">
+						<h2>Why InfiKey</h2>
+						<hr class="h2headings">
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Verified Vendors
+					</h5>
+					<hr>
+					<p>
+						We've tied-up with some of the best vendors in major cities of the country to get you your VAT Registration. We've completed 500+ registrations in the past 12 months.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Satisfied Customers
+					</h5>
+					<hr>
+					<p>
+						We make your interaction with government as smooth as is possible by doing all the paperwork for you. We will also give you absolute clarity on the process to set realistic expectations.
+					</p>
+				</div>
+				<div class="col-md-4 col-xs-12 col-lg-4 col-sm-4 griddata">
+					<h5>
+						Strong Team
+					</h5>
+					<hr>
+					<p>
+						Our team of experienced business advisors are a phone call away, should you have any queries about the process. But we'll try to ensure that your doubts are cleared before they even arise.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

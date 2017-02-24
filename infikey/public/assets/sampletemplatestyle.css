@@ -1,0 +1,118 @@
+.headersection{
+	background-image: url("img/blue.jpg");
+	width: 100%;
+	height: auto;
+	color: #ffffff;
+	margin-top: 40px;
+}
+.formcontact{
+	width: 100%;
+	max-width: 410px;
+}
+.icon{
+	color: green;
+}
+body{
+	line-height: 2.2;
+}
+.h3headings{
+	width: 50%;
+	margin: 0px;
+    padding-bottom: 24px;
+}
+.h2headings{
+	border: 0;
+	border-top: 2px solid #37a8ae;
+	clear: both;
+	width: 20%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.headhr{
+	width: 40%;
+	margin: 0px;
+    padding-bottom: 15px;
+}
+.griddata hr{
+	width: 90px;
+	margin: 0px;
+	border-top: 3px solid #37a8ae;
+    padding-bottom: 24px;
+}
+.knowgroup{
+	padding: 0 15px;
+    overflow: hidden;
+}
+.vatfactssection, .legaldocsection, .faqsection, .typesregsection{
+	background-color: rgba(55, 168, 174,0.2);
+}
+.table>tbody>tr>td{
+    padding: 20px;
+}
+thead{
+	border: 0px;
+	border-color: transparent;
+}
+.knowmoretabbtn{
+	background-color: transparent; 
+	border: 1px solid #37a8ae;
+	color: #37a8ae;
+	border-radius: 0px;
+	margin: auto;
+}
+.knowmoretabbtn:hover{
+	color: #ffffff;
+	border-color: #37a8ae;
+	text-decoration: none;
+	background-color: #37a8ae;
+}
+a:hover{
+	text-decoration: none;
+}
+.table>tbody>tr>td {
+    border-top: 1px solid #37a8ae;
+}
+.panelcustom{
+	background-color: #37a8ae;
+}
+.form-control {
+    border: 1px solid #b3b3b3;
+    border-radius: 0px;
+    -webkit-box-shadow: none; 
+	box-shadow: none; 
+	height: 40px;
+	
+}
+form.form-control.form-horizontal.has-validation-callback{
+	border:0px;
+}
+.formcontact{
+
+	margin-left: 70px;
+}
+.sendbtn{
+	background-color: white;
+	border: 1px solid #37a8ae;
+	color: #37a8ae;
+	border-radius: 0px;
+	margin: auto;
+}
+.absolute{
+	position: absolute;
+	top: -50px;
+}
+.serviceform{
+	background: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 0 26px #000;
+    margin-bottom: 45px;
+}
+@media(min-width: 768px){
+	#serviceid{
+		position: fixed;
+	}
+	.form-width{
+		width: 275px;
+	}
+}
